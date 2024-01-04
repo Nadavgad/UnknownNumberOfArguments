@@ -1,0 +1,28 @@
+class UnknownNumberOfArguments:
+
+    def __init__(self):
+        """
+        empty constructor
+        """
+        pass
+
+    def numberOfArguments(self, *args, **kwargs):
+        """
+        numberOfArguments  prints an unknown number of arguments received by the function.
+
+        :param args: list of arguments.
+        :param kwargs: dictionary of keyword arguments.
+        """
+
+        print(f"\nFunction got arguments: ")
+
+        for valueOnArgs in args:
+            print(valueOnArgs)
+
+        for name, value in kwargs.items():
+            print(f"\nFunction got argument ---> name: {name}   value: {value}")
+
+
+NumberOfArguments = UnknownNumberOfArguments()
+
+NumberOfArguments.numberOfArguments(4, 8, 2, 1, 6, Nadav=31, Gil=28, Nofar=32)
